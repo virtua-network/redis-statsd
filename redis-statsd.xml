@@ -8,7 +8,7 @@
     <dependency name="filesystem" grouping="require_all" restart_on="error" type="service">
       <service_fmri value="svc:/system/filesystem/local"/>
     </dependency>
-    <exec_method name="start" type="method" exec="/opt/local/bin/python /opt/local/share/statsd/redis-statsd.py --no-tags --period 10 --prefix {{ grains['host'] }}_ms_virtua_ch --redis-host 127.0.0.1:6379 --statsd-host stats.ms.virtua.ch:8125" timeout_seconds="60"/>
+    <exec_method name="start" type="method" exec="/opt/local/bin/python /opt/local/bin/redis-statsd.py --no-tags --period 10 --prefix {{ grains['host'] }}_ms_virtua_ch --redis-host 127.0.0.1:6379 --statsd-host stats.ms.virtua.ch:8125" timeout_seconds="60"/>
     <exec_method name="stop" type="method" exec=":kill" timeout_seconds="60"/>
     <instance name="default" enabled="true">
       <property_group name="startd" type="framework">
