@@ -16,8 +16,8 @@
         <propval name="ignore_error" type="astring" value="core,signal"/>
       </property_group>
       <property_group name="general" type="framework">
-        <propval name="action_authorization" type="astring" value="solaris.smf.manage.beholder"/>
-        <propval name="value_authorization" type="astring" value="solaris.smf.value.beholder"/>
+        <propval name="action_authorization" type="astring" value="solaris.smf.manage.redis-statsd"/>
+        <propval name="value_authorization" type="astring" value="solaris.smf.value.redis-statsd"/>
       </property_group>
     </instance>
     <stability value="Evolving"/>
